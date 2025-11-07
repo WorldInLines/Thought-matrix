@@ -3,76 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thought Matrix | Home</title>
+  <title>Thought Matrix | Explore. Analyze. Awaken.</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: "Poppins", sans-serif;
-      background-color: #0b0b0b;
-      color: #f5f5f5;
-      text-align: center;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #222;
+      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(90deg, #000, #1a1a1a);
-      padding: 60px 20px 40px 20px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      background: linear-gradient(120deg, #0077ff, #00c4cc);
+      color: #fff;
+      padding: 80px 20px 60px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     header h1 {
-      font-size: 3em;
-      color: #00e5ff;
-      text-shadow: 0 0 15px #00e5ff;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
     }
 
     header p {
-      color: #bfbfbf;
-      font-size: 1.1em;
-      margin-top: 0;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
-    .options {
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #0077ff;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077ff;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .content h2 {
+      font-size: 2.2rem;
+      color: #0077ff;
+      margin-bottom: 15px;
+    }
+
+    .categories {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 80px 0;
+      gap: 40px;
+      margin-top: 60px;
     }
 
-    .option {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
+    .category {
+      width: 240px;
+      background: #f9f9f9;
       border-radius: 12px;
-      padding: 50px 30px;
-      margin: 20px;
-      width: 220px;
-      font-size: 1.1em;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
+      padding: 35px 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       transition: 0.3s ease;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+      text-decoration: none;
+      color: #333;
     }
 
-    .option:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px #00e5ff;
-      color: #00e5ff;
-      border-color: #00e5ff;
+    .category:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .category h3 {
+      color: #0077ff;
+      margin-bottom: 8px;
+      font-size: 1.3rem;
+    }
+
+    .category p {
+      font-size: 0.95rem;
+      color: #555;
     }
 
     footer {
-      margin-top: 60px;
-      padding: 20px;
-      color: #aaa;
-      font-size: 0.9em;
-      border-top: 1px solid #222;
+      text-align: center;
+      background: #f5f5f5;
+      padding: 25px;
+      margin-top: 80px;
+      color: #666;
+      font-size: 0.9rem;
     }
 
-    a {
-      color: inherit;
+    footer a {
+      color: #0077ff;
       text-decoration: none;
     }
   </style>
@@ -80,15 +143,42 @@
 <body>
   <header>
     <h1>Thought Matrix</h1>
-    <p>Where ideas evolve into insight — explore, analyze, and awaken thought.</p>
+    <p>Explore. Analyze. Awaken — Dive deep into knowledge and awareness.</p>
   </header>
 
-  <div class="options">
-    <a href="research.html"><div class="option">Research Papers</div></a>
-    <a href="case.html"><div class="option">Case Studies</div></a>
-    <a href="articles.html"><div class="option">Articles</div></a>
-    <a href="issues.html"><div class="option">Alarming Issues</div></a>
-  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research Papers</a>
+    <a href="case.html">Case Studies</a>
+    <a href="articles.html">Articles</a>
+    <a href="issues.html">Alarming Issues</a>
+  </nav>
+
+  <section class="content">
+    <h2>Welcome to Thought Matrix</h2>
+    <p>Thought Matrix is a space where ideas meet intellect — a home for critical thinking,  
+    real-world analysis, and youth-driven perspectives. Discover, question, and learn from  
+    thought-provoking research, deep case studies, and articles that challenge the way we see the world.</p>
+
+    <div class="categories">
+      <a href="research.html" class="category">
+        <h3>Research Papers</h3>
+        <p>Investigate and innovate with evidence-based insights.</p>
+      </a>
+      <a href="case.html" class="category">
+        <h3>Case Studies</h3>
+        <p>Analyze real-world examples and uncover powerful lessons.</p>
+      </a>
+      <a href="articles.html" class="category">
+        <h3>Articles</h3>
+        <p>Opinion pieces and deep thoughts from everyday perspectives.</p>
+      </a>
+      <a href="issues.html" class="category">
+        <h3>Alarming Issues</h3>
+        <p>Uncover critical global challenges that need urgent attention.</p>
+      </a>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Thought Matrix | Contact: <a href="mailto:bhaskarvidhi12@gmail.com">bhaskarvidhi12@gmail.com</a></p>
